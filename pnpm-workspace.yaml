@@ -1,0 +1,6 @@
+allowBuilds:
+  nx: true
+
+packages:
+  - 'apps/*'
+  - 'packages/*'

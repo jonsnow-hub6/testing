@@ -1,0 +1,43 @@
+{
+  "plugins": [],
+  "projectNameAndRootFormat": "derived",
+  "targetDefaults": {
+    "build": {
+      "cache": true,
+      "inputs": [
+        "production",
+        "^production"
+      ]
+    }
+  },
+  "release": {
+    "groups": {
+      "apps": {
+        "description": "Application packages",
+        "projects": [
+          "apps/*"
+        ],
+        "projectsRelationship": "fixed"
+      },
+      "packages": {
+        "description": "Reusable library packages",
+        "projects": [
+          "packages/*"
+        ],
+        "projectsRelationship": "independent"
+      }
+    },
+    "changelog": true,
+    "versionPlans": true,
+    "version": {
+      "generatorOptions": {
+        "preserveLocalDependencyProtocols": false
+      },
+      "useLegacyVersioning": false,
+      "updateDependents": "auto"
+    }
+  },
+  "analytics": false,
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "neverConnectToCloud": true
+}

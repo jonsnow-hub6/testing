@@ -1,0 +1,29 @@
+{
+  "name": "testing",
+  "version": "1.0.0",
+  "description": "NX Monorepo for testing",
+  "private": true,
+  "license": "MIT",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "nx": "nx",
+    "start": "nx serve",
+    "build": "nx run-many --target=build",
+    "build:all": "nx run-many --target=build --all",
+    "test": "nx run-many --target=test",
+    "lint": "nx run-many --target=lint",
+    "graph": "nx graph",
+    "affected:build": "nx affected --target=build",
+    "affected:test": "nx affected --target=test",
+    "release": "nx release"
+  },
+  "devDependencies": {
+    "@nx/js": "^23.2.1",
+    "@types/node": "^22.20.3",
+    "nx": "23.2.1",
+    "typescript": "^5.2.2"
+  }
+}
